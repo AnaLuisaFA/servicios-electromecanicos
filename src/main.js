@@ -389,18 +389,29 @@ if (contactForm) {
 
       try {
 
+        // ===================================
+        // URL DE LA API
+        // ===================================
+
+        const API_URL =
+          window.location.hostname === "localhost"
+            ? "http://localhost:3000"
+            : "https://servicios-electromecanicos-api.onrender.com";
+
+
+        // ===================================
+        // ENVIAR DATOS A LA API
+        // ===================================
+
         const response =
           await fetch(
-            "http://localhost:3000/api/contacto",
+            `${API_URL}/api/contacto`,
             {
 
               method: "POST",
 
               headers: {
-
-                "Content-Type":
-                  "application/json"
-
+                "Content-Type": "application/json"
               },
 
               body:

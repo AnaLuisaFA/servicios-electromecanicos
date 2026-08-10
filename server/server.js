@@ -1,7 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 const app = express();
 
@@ -10,32 +10,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 // =========================================
-// CONFIGURACIÓN DEL CORREO
+// CONFIGURACIÓN DE RESEND
 // =========================================
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD
-    },
-
-    tls: {
-        rejectUnauthorized: true
-    }
-});
-
-transporter.verify((error, success) => {
-    if (error) {
-        console.error("❌ Error de conexión con Gmail:");
-        console.error(error);
-    } else {
-        console.log("✅ Conexión con Gmail establecida correctamente");
-    }
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // =========================================
 // PRUEBA DE API
@@ -54,7 +32,6 @@ app.get("/api", (req, res) => {
 // =========================================
 // FORMULARIO DE CONTACTO
 // =========================================
-
 app.post("/api/contacto", async (req, res) => {
 
     const {
@@ -76,67 +53,98 @@ app.post("/api/contacto", async (req, res) => {
     console.log("🔧 Servicio:", servicio);
     console.log("📝 Mensaje:", mensaje);
 
-    console.log("=================================\n");
+    console.log("=================================");
 
 
     try {
+
         console.log("📤 Intentando enviar correo...");
-        const info = await transporter.sendMail({
 
-            from: `"Servicios Electromecánicos" <${process.env.EMAIL_USER}>`,
 
-            to: process.env.EMAIL_DESTINO,
+        const { data, error } = await resend.emails.send({
 
-            replyTo: email,
+            from:
+                "Servicios Electromecánicos <onboarding@resend.dev>",
 
-            subject: `Nueva solicitud de contacto - ${servicio}`,
+            to:
+                [process.env.EMAIL_DESTINO],
+
+            replyTo:
+                email || undefined,
+
+            subject:
+                `Nueva solicitud de contacto - ${servicio || "Sin servicio especificado"}`,
 
             text: `
-        NUEVA SOLICITUD DE CONTACTO
-        ============================
+NUEVA SOLICITUD DE CONTACTO
 
-        Nombre:
-        ${nombre}
+Nombre:
+${nombre}
 
-        Correo:
-        ${email}
+Correo:
+${email || "No proporcionado"}
 
-        Teléfono:
-        ${telefono}
+Teléfono:
+${telefono}
 
-        Servicio:
-        ${servicio}
+Servicio:
+${servicio || "No especificado"}
 
-        Mensaje:
-        ${mensaje}
+Mensaje:
+${mensaje || "Sin mensaje"}
 
-        ============================
-        Solicitud recibida desde el sitio web.
-                    `
+============================
 
-                });
+Solicitud recibida desde el sitio web.
+`
+        });
+
+
+        if (error) {
+
+            console.error("❌ Error de Resend:");
+            console.error(error);
+
+            throw new Error(
+                "No fue posible enviar el correo"
+            );
+        }
 
 
         console.log("✅ Correo enviado correctamente");
-        console.log("📨 Message ID:", info.messageId);
-        console.log("📬 Respuesta SMTP:", info.response);
+
+        console.log(
+            "📨 ID del correo:",
+            data?.id
+        );
 
 
         res.json({
+
             ok: true,
-            mensaje: "Solicitud enviada correctamente"
+
+            mensaje:
+                "Solicitud enviada correctamente"
+
         });
 
 
     } catch (error) {
 
-        console.error("❌ Error al enviar el correo:");
+        console.error(
+            "❌ Error al enviar el correo:"
+        );
+
         console.error(error);
 
 
         res.status(500).json({
+
             ok: false,
-            mensaje: "No fue posible enviar la solicitud"
+
+            mensaje:
+                "No fue posible enviar la solicitud"
+
         });
 
     }
