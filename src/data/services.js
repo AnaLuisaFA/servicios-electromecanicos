@@ -1,3 +1,4 @@
+import heroImage from "../assets/hero.png";
 export const services = {
 
   bobinado: {
@@ -18,11 +19,9 @@ export const services = {
     ],
 
     images: [
-        "/src/assets/hero.png",
-        "/src/assets/hero.png",
-        "/src/assets/hero.png",
-        "/src/assets/hero.png",
-        "/src/assets/hero.png"
+        heroImage,
+        heroImage,
+        heroImage
     ]
   },
 

@@ -392,11 +392,7 @@ if (contactForm) {
         // ===================================
         // URL DE LA API
         // ===================================
-
-        const API_URL =
-          window.location.hostname === "localhost"
-            ? "http://localhost:3000"
-            : "https://servicios-electromecanicos-api.onrender.com";
+        const API_URL = "https://servicios-electromecanicos-api.onrender.com";
 
 
         // ===================================
