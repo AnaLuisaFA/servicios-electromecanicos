@@ -538,3 +538,39 @@ if (contactForm) {
   );
 
 }
+
+// =========================================
+// APRENDE CON NOSOTROS
+// =========================================
+
+const learnCards =
+  document.querySelectorAll(".learn-card");
+
+
+learnCards.forEach(card => {
+
+  card.addEventListener("click", () => {
+
+    const isAlreadyFlipped =
+      card.classList.contains("flipped");
+
+
+    // Cerrar todas las tarjetas
+    learnCards.forEach(otherCard => {
+
+      otherCard.classList.remove("flipped");
+
+    });
+
+
+    // Si la tarjeta no estaba abierta,
+    // abrirla
+    if (!isAlreadyFlipped) {
+
+      card.classList.add("flipped");
+
+    }
+
+  });
+
+});
