@@ -3,20 +3,20 @@
 ========================================= */
 
 :root {
-  --background: #080f24;
-  --background-secondary: #101e42;
-  --card: #142653;
-  --card-hover: #1a3164;
+  --background: #F6F7F9;
+  --background-secondary: #EEF1F4;
+  --card: #263238;
+  --card-hover: #34444A;
 
-  --primary: #00b8e6;
-  --primary-dark: #008eaf;
+  --primary: #D99A00;
+  --primary-dark: #B47D00;
 
-  --accent: #ff542f;
+  --accent: #E0A500;
 
-  --text: #ffffff;
-  --text-secondary: #8e9bb8;
+  --text: #FFFFFF;
+  --text-secondary: #5B6570;
 
-  --border: #213b70;
+  --border: #BCC6CF;
 
   --max-width: 1200px;
 }
@@ -95,9 +95,9 @@ a {
 
   z-index: 1000;
 
-  background: rgba(8, 15, 36, 0.92);
+  background: rgba(6, 18, 37, 0.92);
 
-  border-bottom: 1px solid rgba(33, 59, 112, 0.5);
+  border-bottom: 1px solid rgba(36, 81, 138, 0.5);
 
   backdrop-filter: blur(10px);
 }
@@ -164,9 +164,9 @@ a {
   background:
     linear-gradient(
       90deg,
-      rgba(8, 15, 36, 0.96) 0%,
-      rgba(8, 15, 36, 0.82) 45%,
-      rgba(8, 15, 36, 0.65) 100%
+      rgba(6, 18, 37, 0.96) 0%,
+      rgba(6, 18, 37, 0.82) 45%,
+      rgba(6, 18, 37, 0.65) 100%
     ),
     url('/src/assets/hero.png');
 
@@ -183,8 +183,8 @@ a {
   background:
     linear-gradient(
       180deg,
-      rgba(8, 15, 36, 0.2),
-      rgba(8, 15, 36, 0.7)
+      rgba(6, 18, 37, 0.2),
+      rgba(6, 18, 37, 0.7)
     );
 }
 
@@ -273,13 +273,13 @@ a {
 }
 
 .button-primary:hover {
-  background: #ff6a48;
+  background: #E2AE24;
 }
 
 .button-secondary {
   border: 1px solid var(--border);
 
-  background: rgba(8, 15, 36, 0.5);
+  background: rgba(6, 18, 37, 0.5);
 }
 
 .button-secondary:hover {
@@ -300,7 +300,7 @@ a {
 
   padding-top: 22px;
 
-  border-top: 1px solid rgba(33, 59, 112, 0.8);
+  border-top: 1px solid rgba(36, 81, 138, 0.8);
 }
 
 .hero-info-item {
@@ -516,7 +516,7 @@ a {
 
   border: 1px solid var(--border);
 
-  background: #101e42;
+  background: #EEF1F4;
 }
 
 .workshop-map {
@@ -638,7 +638,7 @@ a {
 }
 
 .google-maps-link:hover {
-  color: #ffffff;
+  color: #FFFFFF;
   transform: translateX(3px);
 }
 
@@ -849,7 +849,7 @@ a {
   color: var(--primary);
 
   background:
-    rgba(0, 184, 230, 0.12);
+    rgba(217, 154, 0, 0.12);
 
 }
 
@@ -861,7 +861,7 @@ a {
 .form-alert.error {
 
   border-color:
-    rgba(255, 84, 47, 0.5);
+    rgba(32, 196, 244, 0.5);
 
 }
 
@@ -872,7 +872,7 @@ a {
   color: var(--accent);
 
   background:
-    rgba(255, 84, 47, 0.12);
+    rgba(32, 196, 244, 0.12);
 
 }
 
@@ -917,7 +917,7 @@ a {
 .footer {
   padding: 40px 0;
 
-  background: #050a18;
+  background: #F7F8F6;
 
   border-top: 1px solid var(--border);
 }
@@ -940,8 +940,8 @@ a {
   background:
     linear-gradient(
       180deg,
-      #080f24 0%,
-      #0d1835 100%
+      #F6F7F9 0%,
+      #172126 100%
     );
 }
 
@@ -962,7 +962,7 @@ a {
 
 
 .back-link:hover {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 
@@ -1397,7 +1397,7 @@ a {
 
   border-radius: 5px;
 
-  background: #101e42;
+  background: #EEF1F4;
 
   color: var(--text);
 
@@ -1418,7 +1418,7 @@ a {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #64718f;
+  color: #66717C;
 }
 
 
@@ -1431,9 +1431,9 @@ a {
   border-color: var(--primary);
 
   box-shadow:
-    0 0 0 3px rgba(0, 184, 230, 0.10);
+    0 0 0 3px rgba(217, 154, 0, 0.10);
 
-  background: #12234a;
+  background: #2E3A40;
 }
 
 
@@ -1473,14 +1473,14 @@ a {
 
   border: none;
 
-  color: #ffffff;
+  color: #FFFFFF;
 
   cursor: pointer;
 }
 
 .contact-form-container .button:hover {
   box-shadow:
-    0 8px 25px rgba(255, 84, 47, 0.25);
+    0 8px 25px rgba(32, 196, 244, 0.25);
 }
 
 
@@ -1591,21 +1591,21 @@ a {
   color: var(--primary);
 
   background:
-    rgba(0, 184, 230, 0.12);
+    rgba(217, 154, 0, 0.12);
 }
 
 
 /* ERROR */
 
 .form-alert.error {
-  border-color: rgba(255, 84, 47, 0.5);
+  border-color: rgba(32, 196, 244, 0.5);
 }
 
 .form-alert.error .form-alert-icon {
   color: var(--accent);
 
   background:
-    rgba(255, 84, 47, 0.12);
+    rgba(32, 196, 244, 0.12);
 }
 
 
@@ -2213,11 +2213,11 @@ a {
   background:
     linear-gradient(
       145deg,
-      rgba(28, 55, 112, 0.95),
-      rgba(18, 39, 82, 0.98)
+      rgba(20, 47, 92, 0.97),
+      rgba(10, 31, 61, 0.99)
     );
 
-  border: 1px solid rgba(0, 194, 255, 0.18);
+  border: 1px solid rgba(217, 154, 0, 0.18);
 
   border-radius: 10px;
 
@@ -2248,7 +2248,7 @@ a {
 
   border-radius: 50%;
 
-  background: rgba(0, 194, 255, 0.08);
+  background: rgba(217, 154, 0, 0.08);
 
   transition: transform 0.4s ease;
 }
@@ -2257,11 +2257,11 @@ a {
 .service-card:hover {
   transform: translateY(-6px);
 
-  border-color: rgba(0, 194, 255, 0.65);
+  border-color: rgba(217, 154, 0, 0.65);
 
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.25),
-    0 0 25px rgba(0, 194, 255, 0.08);
+    0 0 25px rgba(217, 154, 0, 0.08);
 }
 
 
@@ -2287,15 +2287,15 @@ a {
 
   margin-bottom: 22px;
 
-  border: 1px solid #00c2ff;
+  border: 1px solid #D99A00;
 
   border-radius: 8px;
 
-  background: rgba(4, 16, 38, 0.75);
+  background: rgba(6, 18, 37, 0.75);
 
   font-size: 24px;
 
-  color: #00c2ff;
+  color: #D99A00;
 }
 
 
@@ -2317,7 +2317,7 @@ a {
 
   letter-spacing: 2px;
 
-  color: #00c2ff;
+  color: #D99A00;
 }
 
 
@@ -2335,7 +2335,7 @@ a {
 
   line-height: 1.35;
 
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 
@@ -2349,7 +2349,7 @@ a {
 
   margin: 0;
 
-  color: #9caed0;
+  color: #C8D0D8;
 
   font-size: 15px;
 
@@ -2370,7 +2370,7 @@ a {
   margin-top: auto;
   padding-top: 25px;
 
-  color: #00c2ff;
+  color: #D99A00;
 
   font-size: 14px;
 
@@ -2399,11 +2399,11 @@ a {
   background:
     linear-gradient(
       135deg,
-      rgba(24, 49, 102, 0.95),
-      rgba(11, 27, 59, 0.98)
+      rgba(20, 47, 92, 0.96),
+      rgba(7, 25, 52, 0.99)
     );
 
-  border: 1px solid rgba(0, 194, 255, 0.25);
+  border: 1px solid rgba(217, 154, 0, 0.28);
 
   border-radius: 12px;
 
@@ -2424,7 +2424,7 @@ a {
 
   width: 4px;
 
-  background: #00c2ff;
+  background: #D99A00;
 }
 
 
@@ -2443,7 +2443,7 @@ a {
 
   border-radius: 50%;
 
-  background: rgba(0, 194, 255, 0.06);
+  background: rgba(0, 184, 230, 0.06);
 }
 
 
@@ -2473,7 +2473,7 @@ a {
 
   font-size: 28px;
 
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 
@@ -2489,7 +2489,7 @@ a {
 
   margin: 8px 0;
 
-  color: #aebddb;
+  color: #CBD2D9;
 
   font-size: 16px;
 
@@ -2539,7 +2539,7 @@ a {
 .clients {
   position: relative;
   padding: 120px 0 140px;
-  background: #071024;
+  background: #F6F7F9;
   overflow: hidden;
 }
 
@@ -2560,7 +2560,7 @@ a {
 
   background: radial-gradient(
     circle,
-    rgba(0, 174, 255, 0.08),
+    rgba(217, 154, 0, 0.10),
     transparent 65%
   );
 
@@ -2636,17 +2636,17 @@ a {
   background:
     radial-gradient(
       circle at 35% 30%,
-      #182f67,
-      #0b1837 65%,
-      #071024
+      #173A67,
+      #0A1B31 65%,
+      #F6F7F9
     );
 
-  border: 1px solid rgba(0, 195, 255, 0.7);
+  border: 1px solid rgba(217, 154, 0, 0.75);
 
   box-shadow:
-    0 0 0 15px rgba(0, 174, 255, 0.03),
-    0 0 0 35px rgba(0, 174, 255, 0.02),
-    0 0 60px rgba(0, 174, 255, 0.18);
+    0 0 0 15px rgba(0, 184, 230, 0.03),
+    0 0 0 35px rgba(0, 184, 230, 0.02),
+    0 0 60px rgba(217, 154, 0, 0.20);
 
   transition: transform 0.4s ease,
               box-shadow 0.4s ease;
@@ -2658,9 +2658,9 @@ a {
   transform: scale(1.05);
 
   box-shadow:
-    0 0 0 15px rgba(0, 174, 255, 0.05),
-    0 0 0 35px rgba(0, 174, 255, 0.03),
-    0 0 80px rgba(0, 174, 255, 0.3);
+    0 0 0 15px rgba(0, 184, 230, 0.05),
+    0 0 0 35px rgba(0, 184, 230, 0.03),
+    0 0 80px rgba(217, 154, 0, 0.30);
 }
 
 
@@ -2683,7 +2683,7 @@ a {
 
   filter:
     drop-shadow(
-      0 0 12px rgba(0, 200, 255, 0.8)
+      0 0 12px rgba(0, 184, 230, 0.8)
     );
 }
 
@@ -2694,7 +2694,7 @@ a {
 
   letter-spacing: 3px;
 
-  color: #00bfff;
+  color: #D99A00;
 
   font-weight: 700;
 }
@@ -2706,7 +2706,7 @@ a {
 
   line-height: 1.15;
 
-  color: #ffffff;
+  color: #FFFFFF;
 
   letter-spacing: 1px;
 }
@@ -2738,12 +2738,12 @@ a {
   background:
     radial-gradient(
       circle at 30% 25%,
-      #1a3470,
-      #102454 60%,
-      #0a1734
+      #34444A,
+      #202B30 60%,
+      #0A1B31
     );
 
-  border: 1px solid rgba(0, 195, 255, 0.45);
+  border: 1px solid rgba(217, 154, 0, 0.50);
 
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.25);
@@ -2761,11 +2761,11 @@ a {
 
   transform: scale(1.06);
 
-  border-color: #00c8ff;
+  border-color: #E0A500;
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.35),
-    0 0 35px rgba(0, 195, 255, 0.18);
+    0 0 35px rgba(217, 154, 0, 0.18);
 }
 
 
@@ -2792,7 +2792,7 @@ a {
 
   border-radius: 14px;
 
-  background: rgba(0, 195, 255, 0.08);
+  background: rgba(217, 154, 0, 0.08);
 
   border: 1px solid rgba(0, 195, 255, 0.5);
 
@@ -2806,7 +2806,7 @@ a {
 
   font-size: 11px;
 
-  color: #00c8ff;
+  color: #E0A500;
 
   font-weight: 700;
 
@@ -2820,7 +2820,7 @@ a {
 
   margin: 0 0 12px;
 
-  color: #ffffff;
+  color: #FFFFFF;
 
   font-size: 19px;
 
@@ -2846,7 +2846,7 @@ a {
 
   font-size: 11px;
 
-  color: #aebfdf;
+  color: #CDD4DB;
 
   padding: 4px 8px;
 
@@ -3004,7 +3004,7 @@ a {
     linear-gradient(
       180deg,
       rgba(0, 195, 255, 0.5),
-      rgba(0, 195, 255, 0)
+      rgba(0, 166, 214, 0)
     );
 }
 
@@ -3264,4 +3264,420 @@ a {
     height: 255px !important;
   }
 
+}
+
+/* =========================================================
+   OPCIÓN — INDUSTRIAL CLARO
+   Fondo claro + tarjetas y gráficos oscuros
+========================================================= */
+
+body {
+  background: #F6F7F9;
+  color: #3B4A50;
+}
+
+.navbar {
+  background: rgba(244, 246, 248, 0.94);
+  border-bottom: 1px solid #D7DEE5;
+}
+
+.nav-menu a {
+  color: #42505D;
+}
+
+.nav-menu a:hover {
+  color: #D99A00;
+}
+
+.logo {
+  color: #172536;
+}
+
+.section-tag {
+  color: #008EAF;
+}
+
+.section-header h2,
+.clients-header h2 {
+  color: #3B4A50;
+}
+
+.section-header p {
+  color: #5B6570;
+}
+
+/* Hero mantiene carácter oscuro */
+.hero {
+  background-color: #0D1722;
+}
+
+/* Secciones claras */
+.services,
+.workshop,
+.contact {
+  background: #F6F7F9;
+}
+
+/* Tarjetas oscuras */
+.service-card,
+.client-circle {
+  background:
+    linear-gradient(
+      145deg,
+      #263238,
+      #0A1B31
+    );
+  color: #FFFFFF;
+}
+
+/* Gráfico central oscuro */
+.clients-center-ring {
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #173A67,
+      #0A1B31 65%,
+      #0A1119
+    );
+}
+
+/* Panel de enfoque oscuro */
+.services-engineering {
+  background:
+    linear-gradient(
+      135deg,
+      #263238,
+      #0D1722
+    );
+  color: #FFFFFF;
+}
+
+/* Texto dentro de tarjetas */
+.service-card h3,
+.client-circle h3,
+.services-engineering h3 {
+  color: #FFFFFF;
+}
+
+.service-card p,
+.client-circle p {
+  color: #B9C4CE;
+}
+
+/* Taller / información */
+.workshop-info h3,
+.contact-intro h2,
+.contact-form-container h3 {
+  color: #3B4A50;
+}
+
+.workshop-info p,
+.contact-intro p,
+.contact-form-description {
+  color: #5B6570;
+}
+
+/* Formularios */
+.form-group label {
+  color: #344250;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: #FFFFFF;
+  border-color: #C9D2DB;
+  color: #3B4A50;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #D99A00;
+  box-shadow: 0 0 0 3px rgba(217, 154, 0, 0.10);
+}
+
+/* Footer */
+.footer {
+  background: #263238;
+  color: #B9C4CE;
+}
+
+/* Chips */
+.client-items span {
+  color: #CDD4DB;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================================
+   OPCIÓN — AMARILLO INDUSTRIAL / FONDO CLARO
+   Fondo claro + tarjetas oscuras + rojo como acento secundario
+========================================================= */
+
+:root {
+  --industrial-red: #D99A00;
+  --industrial-red-dark: #B47D00;
+  --industrial-red-light: #F2C14E;
+  --industrial-blue: #D99A00;
+  --industrial-blue-dark: #B47D00;
+}
+
+/* Acento amarillo en elementos secundarios */
+.service-card:nth-child(3n) .service-icon,
+.service-card:nth-child(3n) .service-link {
+  color: var(--industrial-red);
+}
+
+.service-card:nth-child(3n) .service-icon {
+  border-color: rgba(217, 154, 0, 0.55);
+}
+
+.service-card:nth-child(3n):hover {
+  border-color: rgba(217, 154, 0, 0.60);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.20),
+    0 0 25px rgba(217, 154, 0, 0.10);
+}
+
+/* Botón secundario amarillo */
+.button-secondary:hover {
+  color: #FFFFFF;
+  background: var(--industrial-red);
+  border-color: var(--industrial-red);
+}
+
+/* Etiquetas amarillas muy sutiles */
+.client-circle:nth-of-type(3) .client-circle-icon {
+  border-color: rgba(217, 154, 0, 0.55);
+}
+
+.client-circle:nth-of-type(3):hover {
+  border-color: var(--industrial-red);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.28),
+    0 0 35px rgba(217, 154, 0, 0.12);
+}
+
+/* Mantener el amarillo como detalle, no como color dominante */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--industrial-blue);
+  box-shadow: 0 0 0 3px rgba(217, 154, 0, 0.10);
+}
+
+/* Links y estados */
+a:hover {
+  color: var(--industrial-blue);
+}
+
+/* Footer con una pequeña línea roja */
+.footer {
+  border-top: 2px solid var(--industrial-red);
+}
+
+
+/* =========================================================
+   PALETA AMARILLO INDUSTRIAL — REFERENCIA
+   Fondo claro + azul grafito + amarillo #F2B705
+========================================================= */
+
+:root {
+  --industrial-yellow: #F2B705;
+  --industrial-yellow-dark: #C99400;
+  --industrial-yellow-light: #FFD45A;
+  --industrial-graphite: #263238;
+}
+
+/* Acento principal */
+.section-tag,
+.service-link {
+  color: var(--industrial-yellow);
+}
+
+.section-tag {
+  border-color: var(--industrial-yellow);
+}
+
+/* Amarillo en botones principales */
+.button-primary {
+  background: var(--industrial-yellow);
+  border-color: var(--industrial-yellow);
+  color: #111820;
+}
+
+.button-primary:hover {
+  background: var(--industrial-yellow-dark);
+  border-color: var(--industrial-yellow-dark);
+  color: #FFFFFF;
+}
+
+/* Tarjetas oscuras con detalle amarillo */
+.service-card:hover,
+.client-category:hover {
+  border-color: rgba(242, 183, 5, 0.65);
+}
+
+/* Focus de formularios */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--industrial-yellow);
+  box-shadow: 0 0 0 3px rgba(242, 183, 5, 0.14);
+}
+
+/* Detalles gráficos */
+.footer {
+  border-top-color: var(--industrial-yellow);
+}
+
+/* Mantener el fondo general luminoso */
+body {
+  background: #F7F8F6;
+  color: #263238;
+}
+
+
+/* =========================================================
+   TARJETAS — GRAFITO INDUSTRIAL + AMARILLO
+========================================================= */
+
+:root {
+  --card-graphite: #263238;
+  --card-graphite-light: #34444A;
+  --card-graphite-dark: #202B30;
+  --industrial-yellow: #F2B705;
+  --industrial-yellow-dark: #C99400;
+  --industrial-yellow-light: #FFD45A;
+}
+
+/* Tarjetas principales */
+.service-card,
+.client-category,
+.client-circle,
+.workshop-info,
+.contact-form-container {
+  background:
+    linear-gradient(
+      145deg,
+      #34444A 0%,
+      #263238 55%,
+      #202B30 100%
+    );
+  color: #FFFFFF;
+  border-color: rgba(242, 183, 5, 0.38);
+}
+
+/* Un poco de profundidad sin volverlas demasiado oscuras */
+.service-card,
+.client-category,
+.client-circle {
+  box-shadow:
+    0 14px 35px rgba(38, 50, 56, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+
+/* Hover amarillo */
+.service-card:hover,
+.client-category:hover,
+.client-circle:hover {
+  border-color: rgba(242, 183, 5, 0.85);
+  box-shadow:
+    0 18px 45px rgba(38, 50, 56, 0.25),
+    0 0 28px rgba(242, 183, 5, 0.12);
+}
+
+/* Iconos de las tarjetas */
+.service-icon,
+.client-category-icon,
+.client-circle-icon {
+  background: #202B30;
+  border-color: rgba(242, 183, 5, 0.65);
+  color: var(--industrial-yellow);
+}
+
+/* Número de las tarjetas */
+.client-circle-number {
+  color: var(--industrial-yellow);
+}
+
+/* Etiquetas pequeñas dentro de las tarjetas */
+.client-circle-tag,
+.client-category li {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #DCE3E5;
+}
+
+/* Texto secundario */
+.service-card p,
+.client-category p,
+.client-category li {
+  color: #C8D1D4;
+}
+
+/* Línea/acento */
+.service-link {
+  color: var(--industrial-yellow);
+}
+
+.service-link:hover {
+  color: var(--industrial-yellow-light);
+}
+
+/* Círculo central de clientes */
+.clients-center {
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #3B4A50 0%,
+      #263238 55%,
+      #202B30 100%
+    );
+  border-color: var(--industrial-yellow);
+  box-shadow:
+    0 0 0 12px rgba(242, 183, 5, 0.045),
+    0 0 45px rgba(242, 183, 5, 0.10);
+}
+
+/* Líneas del diagrama */
+.clients-diagram::before,
+.clients-diagram::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(242, 183, 5, 0.45),
+    transparent
+  );
+}
+
+/* Formularios */
+.contact-form-container {
+  border-color: rgba(242, 183, 5, 0.35);
+}
+
+/* Botón principal */
+.button-primary {
+  background: var(--industrial-yellow);
+  border-color: var(--industrial-yellow);
+  color: #202B30;
+  box-shadow: 0 8px 22px rgba(242, 183, 5, 0.18);
+}
+
+.button-primary:hover {
+  background: var(--industrial-yellow-dark);
+  border-color: var(--industrial-yellow-dark);
+  color: #FFFFFF;
+}
+
+/* Fondo general */
+body {
+  background: #F7F8F6;
+}
+
+/* Separadores */
+section {
+  border-color: rgba(38, 50, 56, 0.10);
 }

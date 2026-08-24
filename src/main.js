@@ -1,5 +1,12 @@
 
 import './style.css';
+//import './style_azul_industrial.css';
+//import './style_industrial_premium.css';
+//import './style_amarillo_industrial_claro.css';
+//import './style_claro_industrial.css';
+//import './style_amarillo_grafito_combinado.css';
+//import './style_amarillo_fondo_claro_tarjetas_sutiles.css';
+
 import { services } from './data/services.js';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -392,7 +399,7 @@ if (contactForm) {
         // ===================================
         // URL DE LA API
         // ===================================
-        const API_URL = "https://servicios-electromecanicos-api.onrender.com";
+        const API_URL = "https://servicios-electromecanicos-texis.onrender.com/";
 
 
         // ===================================
