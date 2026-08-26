@@ -1,11 +1,11 @@
 
-import './style.css';
+//import './style.css';
 //import './style_azul_industrial.css';
 //import './style_industrial_premium.css';
 //import './style_amarillo_industrial_claro.css';
 //import './style_claro_industrial.css';
 //import './style_amarillo_grafito_combinado.css';
-//import './style_amarillo_fondo_claro_tarjetas_sutiles.css';
+import './style_amarillo_fondo_claro_tarjetas_sutiles.css';
 
 import { services } from './data/services.js';
 import L from 'leaflet';
@@ -23,17 +23,25 @@ if (path.startsWith('/servicios/')) {
 
 function renderServicePage() {
 
+  const path = window.location.pathname;
+
   const slug = path
-    .replace('/servicios/', '')
-    .replace('/', '');
+    .split('/servicios/')[1]
+    ?.split('/')[0];
 
   const service = services[slug];
 
   if (!service) {
+    console.error('Servicio no encontrado:', slug);
     return;
   }
 
   const main = document.querySelector('main');
+
+  if (!main) {
+    console.error('No se encontró el elemento <main>');
+    return;
+  }
 
   main.innerHTML = `
 
@@ -44,7 +52,6 @@ function renderServicePage() {
         <a href="/#servicios" class="back-link">
           ← Volver a servicios
         </a>
-
 
         <div class="service-detail-header">
 
@@ -62,7 +69,6 @@ function renderServicePage() {
 
         </div>
 
-
         <div class="service-detail-content">
 
           <div class="service-detail-description">
@@ -76,7 +82,6 @@ function renderServicePage() {
             </p>
 
           </div>
-
 
           <div class="service-detail-activities">
 
@@ -96,7 +101,6 @@ function renderServicePage() {
 
         </div>
 
-
         <div class="service-gallery">
 
           <h2>
@@ -104,7 +108,7 @@ function renderServicePage() {
           </h2>
 
           ${
-            service.images.length > 0
+            service.images && service.images.length > 0
               ? `
                 <div class="service-gallery-grid">
 
@@ -130,7 +134,6 @@ function renderServicePage() {
 
         </div>
 
-
         <div class="service-detail-action">
 
           <a
@@ -148,7 +151,6 @@ function renderServicePage() {
 
   `;
 }
-
 
 function initWorkshopMap() {
 
