@@ -3265,3 +3265,401 @@ a {
   }
 
 }
+
+/* =========================================
+   TIPOS DE MOTORES
+   MISMO ESTILO QUE APRENDE CON NOSOTROS
+========================================= */
+
+.motor-types {
+  padding: 120px 0;
+  background: var(--background-secondary);
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.motor-types .section-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.motor-types .section-header h2 {
+  margin-top: 18px;
+  font-size: clamp(34px, 4vw, 50px);
+  color: var(--text);
+}
+
+.motor-types .section-header p {
+  max-width: 700px;
+  margin: 18px auto 0;
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.motor-types-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 25px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TARJETAS
+   MISMO ESTILO QUE .learn-card-front
+========================================= */
+
+.motor-type-card {
+
+  position: relative;
+
+  width: 100%;
+
+  padding: 32px;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 10px;
+
+  background: var(--card);
+
+  color: var(--text);
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* HOVER IGUAL QUE APRENDE */
+
+.motor-type-card:hover {
+
+  border-color:
+    var(--primary);
+
+  background:
+    var(--card-hover);
+}
+
+
+/* =========================================
+   NÚMERO
+========================================= */
+
+.motor-type-card .motor-type-number {
+
+  position: absolute;
+
+  top: 25px;
+
+  right: 28px;
+
+  color: var(--primary);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   ICONO
+   MISMO ESTILO QUE .learn-icon
+========================================= */
+
+.motor-type-card .motor-type-icon {
+
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border:
+    1px solid
+    var(--primary);
+
+  border-radius: 7px;
+
+  color: var(--primary);
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   TÍTULO
+   MISMO ESTILO QUE .learn-card-front h3
+========================================= */
+
+.motor-type-card h3 {
+
+  max-width: 480px;
+
+  margin: 0 0 10px;
+
+  font-size: 22px;
+
+  line-height: 1.3;
+
+  color: var(--text);
+}
+
+
+/* =========================================
+   VOLTAJE
+========================================= */
+
+.motor-type-card .motor-type-voltage {
+
+  margin: 0 0 25px;
+
+  color: var(--primary);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.motor-type-content {
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.motor-type-content h4 {
+
+  margin: 0 0 22px;
+
+  color: var(--text);
+
+  font-size: 17px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   TÍTULOS DE CARACTERÍSTICAS
+========================================= */
+
+.motor-type-content h5 {
+
+  margin: 20px 0 10px;
+
+  color: var(--text);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   LISTAS
+========================================= */
+
+.motor-type-content ul {
+
+  margin: 0;
+
+  padding-left: 20px;
+}
+
+.motor-type-content li {
+
+  margin-bottom: 7px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .motor-types {
+
+    padding: 90px 0;
+
+  }
+
+  .motor-types-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .motor-type-card {
+
+    padding: 28px;
+
+  }
+
+  .motor-type-card h3 {
+
+    font-size: 20px;
+
+  }
+
+}
+
+/* =========================================
+   TIPOS DE MOTORES
+   AJUSTES PARA TARJETAS FLIP
+========================================= */
+
+.motor-voltage {
+  margin: 15px 0 0;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* Subtítulo de la parte posterior */
+
+.motor-subtitle {
+  margin: -5px 0 18px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* Información de la tarjeta */
+
+.motor-info {
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* Títulos: Características / Aplicaciones */
+
+.motor-info strong {
+  display: block;
+
+  margin-top: 12px;
+  margin-bottom: 5px;
+
+  color: var(--text);
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+
+/* Listas */
+
+.motor-info ul {
+  margin: 0 0 10px;
+  padding-left: 18px;
+}
+
+.motor-info li {
+  margin-bottom: 3px;
+  color: var(--text-secondary);
+}
+
+
+/* Ajuste para que el contenido quepa */
+
+.learn-card-back {
+  overflow-y: auto;
+}
+
+
+/* =========================================
+   SCROLLBAR - TARJETAS DE MOTORES
+========================================= */
+
+.learn-card-back::-webkit-scrollbar {
+  width: 8px;
+}
+
+.learn-card-back::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.learn-card-back::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.learn-card-back::-webkit-scrollbar-thumb:hover {
+  background: #00b8e6;
+}
+
+
+/* Firefox */
+
+.learn-card-back {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+/* =========================================
+   REDUCIR ESPACIO ENTRE SECCIONES
+========================================= */
+
+#tipos-motores {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
