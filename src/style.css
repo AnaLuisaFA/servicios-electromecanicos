@@ -34,16 +34,24 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--background);
+  background-image:
+    linear-gradient(rgba(8, 15, 36, 0.74), rgba(8, 15, 36, 0.74)),
+    url('/src/assets/hero.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
   font-family:
-    Inter,
-    Arial,
-    Helvetica,
+    "Barlow Semi Condensed",
+    "Bahnschrift SemiCondensed",
+    "Arial Narrow",
     sans-serif;
 
-  background: var(--background);
+  background: transparent;
   color: var(--text);
 
   line-height: 1.6;
@@ -121,8 +129,8 @@ a {
 .logo {
   color: var(--text);
 
-  font-size: 17px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .nav-menu {
@@ -161,18 +169,7 @@ a {
 
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(8, 15, 36, 0.96) 0%,
-      rgba(8, 15, 36, 0.82) 45%,
-      rgba(8, 15, 36, 0.65) 100%
-    ),
-    url('/src/assets/hero.png');
-
-  background-size: cover;
-
-  background-position: center;
+  background: transparent;
 }
 
 .hero-overlay {
@@ -181,11 +178,7 @@ a {
   inset: 0;
 
   background:
-    linear-gradient(
-      180deg,
-      rgba(8, 15, 36, 0.2),
-      rgba(8, 15, 36, 0.7)
-    );
+    rgba(8, 15, 36, 0.16);
 }
 
 .hero-container {
@@ -207,7 +200,7 @@ a {
 .hero h1 {
   margin-top: 22px;
 
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(36px, 4vw, 58px);
 
   line-height: 1.05;
 
@@ -272,6 +265,10 @@ a {
   background: var(--accent);
 }
 
+.hero .button {
+  font-size: 16px;
+}
+
 .button-primary:hover {
   background: #ff6a48;
 }
@@ -314,7 +311,7 @@ a {
 .hero-info-item span {
   color: var(--primary);
 
-  font-size: 9px;
+  font-size: 14px;
 
   letter-spacing: 1px;
 
@@ -322,7 +319,7 @@ a {
 }
 
 .hero-info-item strong {
-  font-size: 13px;
+  font-size: 18px;
 }
 
 
@@ -331,21 +328,24 @@ a {
 ========================================= */
 
 .services {
-  padding: 110px 0;
+  padding: 0;
 
   background: var(--background);
 }
 
 .section-header {
+  width: 100vw;
+  max-width: none;
+  margin: 0 calc(50% - 50vw) 55px;
+  padding: 24px 5vw 28px;
+  background: #050a18;
   text-align: center;
-
-  max-width: 760px;
-
-  margin: 0 auto 55px;
 }
 
 .section-header h2 {
-  margin-top: 18px;
+  display: block;
+  margin-top: 0;
+  padding: 0;
 
   font-size: clamp(30px, 4vw, 44px);
 
@@ -353,7 +353,8 @@ a {
 }
 
 .section-header p {
-  margin-top: 15px;
+  max-width: 760px;
+  margin: 15px auto 0;
 
   color: var(--text-secondary);
 }
@@ -471,7 +472,7 @@ a {
 ========================================= */
 
 .workshop {
-  padding: 120px 0;
+  padding: 0;
   background: var(--background-secondary);
 }
 
@@ -520,7 +521,7 @@ a {
 }
 
 .workshop-map {
-  width: 100%;
+  padding: 60px 0 120px;
   height: 100%;
   min-height: 500px;
 }
@@ -663,7 +664,7 @@ a {
 @media (max-width: 600px) {
 
   .workshop {
-    padding: 90px 0;
+    padding: 0;
   }
 
   .workshop-map-container {
@@ -683,7 +684,7 @@ a {
 .contact {
   min-height: 500px;
 
-  padding: 110px 0;
+  padding: 0;
 }
 
 .contact h2 {
@@ -1209,7 +1210,7 @@ a {
   }
 
   .hero h1 {
-    font-size: 42px;
+    font-size: 36px;
   }
 
   .hero-description {
@@ -1239,7 +1240,7 @@ a {
 ========================================= */
 
 .contact {
-  padding: 120px 0;
+  padding: 0;
   background: var(--background);
 }
 
@@ -1642,8 +1643,10 @@ a {
 
 
 .contact-intro h2 {
+  display: block;
 
-  margin-top: 20px;
+  margin-top: 0;
+  padding: 0;
 
   font-size: clamp(
     38px,
@@ -1659,17 +1662,15 @@ a {
 
 
 .contact-intro p {
-
   max-width: 650px;
-
   margin: 22px auto 0;
-
   color: var(--text-secondary);
-
   font-size: 15px;
-
   line-height: 1.8;
+}
 
+.contact-header {
+  margin-bottom: 24px;
 }
 
 
@@ -1817,7 +1818,7 @@ a {
 @media (max-width: 600px) {
 
   .contact {
-    padding: 90px 0;
+    padding: 0;
   }
 
   .contact-form-container {
@@ -1850,8 +1851,17 @@ a {
 ========================================= */
 
 .learn {
-  padding: 120px 0;
+  padding: 0;
   background: var(--background-secondary);
+}
+
+#aprende .motor-cards {
+  padding: 0;
+  background: transparent;
+}
+
+.motor-cards .learn-grid {
+  margin-bottom: 25px;
 }
 
 .learn-header {
@@ -2164,9 +2174,7 @@ a {
 @media (max-width: 700px) {
 
   .learn {
-
-    padding: 90px 0;
-
+    padding: 0;
   }
 
 
@@ -2264,6 +2272,30 @@ a {
     0 0 25px rgba(0, 194, 255, 0.08);
 }
 
+.future-service-card {
+  cursor: default;
+}
+
+.future-service-card:hover {
+  transform: none;
+  border-color: rgba(0, 194, 255, 0.18);
+  box-shadow: none;
+}
+
+.future-service-card:hover::before {
+  transform: none;
+}
+
+.future-service-label {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 8px;
+  color: #00c2ff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 
 .service-card:hover::before {
   transform: scale(1.8);
@@ -2329,11 +2361,13 @@ a {
   position: relative;
   z-index: 1;
 
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 
-  font-size: 20px;
+  font-size: 22px;
 
-  line-height: 1.35;
+  font-weight: 600;
+
+  line-height: 1.4;
 
   color: #ffffff;
 }
@@ -2351,9 +2385,9 @@ a {
 
   color: #9caed0;
 
-  font-size: 15px;
+  font-size: 16px;
 
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 
@@ -2372,7 +2406,7 @@ a {
 
   color: #00c2ff;
 
-  font-size: 14px;
+  font-size: 15px;
 
   font-weight: 700;
 
@@ -2389,10 +2423,15 @@ a {
    NUESTRO ENFOQUE
 ========================================= */
 
+.focus-section {
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--border);
+}
+
 .services-engineering {
   position: relative;
 
-  margin-top: 70px;
+  margin-top: 30px;
 
   padding: 50px 55px;
 
@@ -2521,747 +2560,13 @@ a {
   }
 
   .services-engineering {
-    margin-top: 45px;
+    margin-top: 20px;
 
     padding: 35px 30px;
   }
 
   .services-engineering h3 {
     font-size: 23px;
-  }
-
-}
-
-/* =========================================================
-   NUESTROS CLIENTES
-========================================================= */
-
-.clients {
-  position: relative;
-  padding: 120px 0 140px;
-  background: #071024;
-  overflow: hidden;
-}
-
-
-/* Brillo ambiental */
-
-.clients::before {
-  content: "";
-  position: absolute;
-
-  width: 600px;
-  height: 600px;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  background: radial-gradient(
-    circle,
-    rgba(0, 174, 255, 0.08),
-    transparent 65%
-  );
-
-  pointer-events: none;
-}
-
-
-/* Encabezado */
-
-.clients-header {
-  position: relative;
-  z-index: 2;
-
-  text-align: center;
-
-  max-width: 800px;
-
-  margin: 0 auto 90px;
-}
-
-.clients-header h2 {
-  margin-bottom: 20px;
-}
-
-.clients-header p {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-
-/* =========================================================
-   DIAGRAMA
-========================================================= */
-
-.clients-diagram {
-
-  position: relative;
-
-  width: 100%;
-  max-width: 1100px;
-
-  min-height: 650px;
-
-  margin: 0 auto;
-}
-
-
-/* =========================================================
-   CÍRCULO CENTRAL
-========================================================= */
-.clients-center {
-  position: absolute;
-
-  left: 50%;
-  top: 5%;
-
-  transform: translate(-50%, -50%);
-
-  z-index: 10;
-}
-
-.clients-center-ring {
-
-  width: 280px;
-  height: 280px;
-
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      #182f67,
-      #0b1837 65%,
-      #071024
-    );
-
-  border: 1px solid rgba(0, 195, 255, 0.7);
-
-  box-shadow:
-    0 0 0 15px rgba(0, 174, 255, 0.03),
-    0 0 0 35px rgba(0, 174, 255, 0.02),
-    0 0 60px rgba(0, 174, 255, 0.18);
-
-  transition: transform 0.4s ease,
-              box-shadow 0.4s ease;
-}
-
-
-.clients-center-ring:hover {
-
-  transform: scale(1.05);
-
-  box-shadow:
-    0 0 0 15px rgba(0, 174, 255, 0.05),
-    0 0 0 35px rgba(0, 174, 255, 0.03),
-    0 0 80px rgba(0, 174, 255, 0.3);
-}
-
-
-.clients-center-content {
-
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-
-  gap: 8px;
-}
-
-
-.clients-center-icon {
-
-  font-size: 30px;
-
-  filter:
-    drop-shadow(
-      0 0 12px rgba(0, 200, 255, 0.8)
-    );
-}
-
-
-.clients-center-small {
-
-  font-size: 11px;
-
-  letter-spacing: 3px;
-
-  color: #00bfff;
-
-  font-weight: 700;
-}
-
-
-.clients-center-content strong {
-
-  font-size: 23px;
-
-  line-height: 1.15;
-
-  color: #ffffff;
-
-  letter-spacing: 1px;
-}
-
-
-/* =========================================================
-   CÍRCULOS DE CLIENTES
-========================================================= */
-
-.client-circle {
-
-  position: absolute;
-
-  width: 250px;
-  height: 250px;
-
-  border-radius: 50%;
-
-  padding: 35px;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  background:
-    radial-gradient(
-      circle at 30% 25%,
-      #1a3470,
-      #102454 60%,
-      #0a1734
-    );
-
-  border: 1px solid rgba(0, 195, 255, 0.45);
-
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.25);
-
-  z-index: 3;
-
-  transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-
-.client-circle:hover {
-
-  transform: scale(1.06);
-
-  border-color: #00c8ff;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.35),
-    0 0 35px rgba(0, 195, 255, 0.18);
-}
-
-
-
-
-.client-circle-municipalities:hover {
-
-  transform: translateX(-50%) scale(1.06);
-}
-
-
-/* =========================================================
-   CONTENIDO DE LOS CÍRCULOS
-========================================================= */
-
-.client-circle-icon {
-
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 14px;
-
-  background: rgba(0, 195, 255, 0.08);
-
-  border: 1px solid rgba(0, 195, 255, 0.5);
-
-  font-size: 24px;
-
-  margin-bottom: 8px;
-}
-
-
-.client-circle-number {
-
-  font-size: 11px;
-
-  color: #00c8ff;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  margin-bottom: 5px;
-}
-
-
-.client-circle h3 {
-
-  margin: 0 0 12px;
-
-  color: #ffffff;
-
-  font-size: 19px;
-
-  line-height: 1.2;
-}
-
-
-/* Lista */
-
-.client-items {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 5px;
-}
-
-
-.client-items span {
-
-  font-size: 11px;
-
-  color: #aebfdf;
-
-  padding: 4px 8px;
-
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.04);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-
-/* =========================================================
-   LÍNEAS
-========================================================= */
-
-.clients-line {
-
-  position: absolute;
-
-  height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(0, 195, 255, 0.5),
-      transparent
-    );
-
-  z-index: 1;
-}
-
-/* =========================================================
-   DISTRIBUCIÓN DEL DIAGRAMA DE CLIENTES
-========================================================= */
-.clients-diagram {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 800px;
-  margin: 0 auto;
-}
-
-
-/* =========================================================
-   CÍRCULO CENTRAL
-========================================================= */
-
-.clients-center {
-  position: absolute;
-
-  left: 50%;
-  top: 48%;
-
-  transform: translate(-50%, -50%);
-
-  z-index: 10;
-}
-
-
-/* =========================================================
-   FÁBRICAS
-========================================================= */
-
-.client-circle-factories {
-  top: 55px;
-  left: 35px;
-
-  z-index: 4;
-}
-
-
-/* =========================================================
-   TALLERES
-========================================================= */
-
-.client-circle-workshops {
-  top: 55px;
-  right: 35px;
-
-  z-index: 4;
-}
-
-
-/* =========================================================
-   MUNICIPIOS
-========================================================= */
-.client-circle-municipalities {
-  left: 50%;
-  bottom: -65px;
-
-  transform: translateX(-50%);
-
-  z-index: 4;
-}
-
-
-.client-circle-municipalities:hover {
-
-  transform:
-    translateX(-50%)
-    scale(1.06);
-}
-
-
-/* =========================================================
-   LÍNEA IZQUIERDA
-========================================================= */
-
-.clients-line-left {
-
-  width: 250px;
-
-  left: 275px;
-  top: 230px;
-
-  transform: rotate(24deg);
-
-  transform-origin: left center;
-}
-
-
-/* =========================================================
-   LÍNEA DERECHA
-========================================================= */
-
-.clients-line-right {
-
-  width: 250px;
-
-  right: 275px;
-  top: 230px;
-
-  transform: rotate(-24deg);
-
-  transform-origin: right center;
-}
-
-
-/* =========================================================
-   LÍNEA HACIA MUNICIPIOS
-========================================================= */
-
-.clients-line-bottom {
-
-  width: 1px;
-  height: 150px;
-
-  left: 50%;
-  bottom: 240px;
-
-  transform: translateX(-50%);
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 195, 255, 0.5),
-      rgba(0, 195, 255, 0)
-    );
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 900px) {
-
-  .clients {
-    padding: 90px 20px;
-  }
-
-
-  .clients-diagram {
-
-    min-height: auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 35px;
-  }
-
-
-  .clients-center,
-  .client-circle {
-
-    position: relative;
-
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-
-    transform: none;
-  }
-
-
-  .clients-center-ring {
-
-    width: 280px;
-    height: 280px;
-  }
-
-
-  .client-circle {
-
-    width: 260px;
-    height: 260px;
-  }
-
-
-  .client-circle-municipalities:hover {
-
-    transform: scale(1.06);
-  }
-
-
-  .clients-line {
-
-    display: none;
-  }
-
-}
-
-
-@media (max-width: 500px) {
-
-  .clients-header {
-    margin-bottom: 55px;
-  }
-
-
-  .clients-header h2 {
-    font-size: 32px;
-  }
-
-
-  .clients-center-ring {
-
-    width: 260px;
-    height: 260px;
-  }
-
-
-  .client-circle {
-
-    width: 245px;
-    height: 245px;
-
-    padding: 30px;
-  }
-
-}
-
-/* =========================================
-   CLIENTES - RESPONSIVE
-========================================= */
-
-@media (max-width: 900px) {
-
-  .clients {
-    overflow: hidden;
-  }
-
-  .clients-diagram {
-    position: relative !important;
-
-    width: 100% !important;
-    height: auto !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-
-    gap: 70px !important;
-
-    padding: 50px 20px 100px !important;
-
-    box-sizing: border-box;
-  }
-
-
-  /* =========================================
-     CÍRCULO CENTRAL
-  ========================================= */
-
-  .clients-center {
-    position: relative !important;
-
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-
-    transform: none !important;
-
-    width: 300px !important;
-    height: 300px !important;
-
-    margin: 0 !important;
-
-    flex-shrink: 0;
-
-    order: 1;
-  }
-
-
-  /* =========================================
-     FÁBRICAS
-  ========================================= */
-
-  .client-circle-factories {
-    position: relative !important;
-
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-
-    transform: none !important;
-
-    width: 280px !important;
-    height: 280px !important;
-
-    margin: 0 !important;
-
-    flex-shrink: 0;
-
-    order: 2;
-  }
-
-
-  /* =========================================
-     TALLERES
-  ========================================= */
-
-  .client-circle-workshops {
-    position: relative !important;
-
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-
-    transform: none !important;
-
-    width: 280px !important;
-    height: 280px !important;
-
-    margin: 0 !important;
-
-    flex-shrink: 0;
-
-    order: 3;
-  }
-
-
-  /* =========================================
-     MUNICIPIOS
-  ========================================= */
-
-  .client-circle-municipalities {
-    position: relative !important;
-
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-
-    transform: none !important;
-
-    width: 280px !important;
-    height: 280px !important;
-
-    margin: 0 !important;
-
-    flex-shrink: 0;
-
-    order: 4;
-  }
-
-
-  /* =========================================
-     OCULTAR CONECTORES EN MÓVIL
-  ========================================= */
-
-  .clients-line,
-  .clients-line-left,
-  .clients-line-right,
-  .clients-line-bottom {
-    display: none !important;
-  }
-
-}
-
-@media (max-width: 600px) {
-
-  .clients-diagram {
-    gap: 55px !important;
-    padding: 40px 10px 80px !important;
-  }
-
-  .clients-center {
-    width: 270px !important;
-    height: 270px !important;
-  }
-
-  .client-circle-factories,
-  .client-circle-workshops,
-  .client-circle-municipalities {
-    width: 255px !important;
-    height: 255px !important;
   }
 
 }
@@ -3569,6 +2874,115 @@ a {
   font-weight: 700;
 }
 
+/* Las secciones revelan el fondo fijo del documento */
+main > #servicios,
+main > #tipos-motores,
+main > #instalaciones,
+main > #aprende,
+main > #clientes,
+main > #contacto {
+  background: transparent;
+}
+
+main > #contacto {
+  background: #050a18;
+}
+
+/* =========================================
+   CLIENTES - SECTORES EDITORIALES
+========================================= */
+
+.clients {
+  padding: 0;
+  background: rgba(8, 15, 36, 0.45);
+}
+
+.clients-header {
+  margin-bottom: 54px;
+}
+
+.client-sectors {
+  border-top: 1px solid var(--border);
+}
+
+.client-sector {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(28px, 5vw, 76px);
+  padding: 34px clamp(18px, 3vw, 36px);
+  border-bottom: 1px solid var(--border);
+}
+
+.client-sector-media {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--background);
+}
+
+.client-sector-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-sector-reverse .client-sector-media {
+  order: 2;
+}
+
+.client-sector-copy {
+  max-width: 440px;
+  padding: 24px 0;
+}
+
+.client-sector-copy h3 {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.client-sector-copy p {
+  max-width: 420px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+@media (max-width: 700px) {
+  .clients {
+    padding: 0;
+  }
+
+  .clients-header {
+    margin-bottom: 36px;
+  }
+
+  .client-sector {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 24px 18px 30px;
+  }
+
+  .client-sector-reverse .client-sector-media {
+    order: 0;
+  }
+
+  .client-sector-copy {
+    max-width: none;
+    padding: 22px 2px 4px;
+  }
+
+  .client-sector-copy h3 {
+    font-size: 27px;
+  }
+}
+
 
 /* Subtítulo de la parte posterior */
 
@@ -3662,4 +3076,24 @@ a {
 #tipos-motores {
   padding-top: 50px;
   padding-bottom: 100px;
+}
+
+main > #servicios,
+main > #aprende,
+main > #INDUSTRIAS,
+main > #instalaciones,
+main > #contacto,
+main > .focus-section {
+  padding-bottom: 48px;
+}
+
+@media (max-width: 700px) {
+  main > #servicios,
+  main > #aprende,
+  main > #INDUSTRIAS,
+  main > #instalaciones,
+  main > #contacto,
+  main > .focus-section {
+    padding-bottom: 32px;
+  }
 }

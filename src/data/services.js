@@ -1,29 +1,26 @@
 import heroImage from "../assets/hero.png";
 
 export const services = {
-
-  // =========================================
-  // 01. BOBINADO DE MOTORES
-  // =========================================
-
   bobinado: {
 
     title:
-      "Bobinado de motores monofásicos y trifásicos",
+      "Bobinado",
 
     shortDescription:
-      "Bobinado y reparación de motores eléctricos monofásicos y trifásicos.",
+      "Restauración de devanados a las condiciones originales.",
 
     description:
-      "Realizamos trabajos especializados de bobinado y reparación de motores eléctricos monofásicos y trifásicos, considerando las características eléctricas, mecánicas y condiciones de operación de cada equipo.",
+      "Restauración de devanados a las condiciones originales.",
 
     activities: [
-      "Bobinado de motores monofásicos",
-      "Bobinado de motores trifásicos",
-      "Reconstrucción de bobinados",
-      "Reparación de motores eléctricos",
-      "Cambio de aislamiento",
-      "Pruebas eléctricas"
+      "Desmontaje y limpieza de componentes",
+      "Retiro de devanados dañados",
+      "Fabricación e instalación de devanados",
+      "Reemplazo de aislamientos",
+      "Reemplazo de rodamientos",
+      "Pintura exterior",
+      "Pruebas eléctricas",
+      "Puesta en marcha y verificación de operación"
     ],
 
     images: [
@@ -33,323 +30,180 @@ export const services = {
     ]
 
   },
-
-
-  // =========================================
-  // 02. CONVERSIÓN
-  // =========================================
-
   conversion: {
 
     title:
+      "Conversión de motores",
+
+    shortDescription:
+      "Conversión y rediseño de devanados para adaptar motores a las condiciones eléctricas y requerimientos operativos de cada aplicación industrial.",
+
+    description:
+      "Conversión y rediseño de devanados para adaptar motores a las condiciones eléctricas y requerimientos operativos de cada aplicación industrial.",
+
+    activities: [
       "Conversión de motores trifásicos a monofásicos",
-
-    shortDescription:
-      "Adaptación técnica de motores trifásicos para aplicaciones con alimentación monofásica.",
-
-    description:
-      "Realizamos trabajos de conversión y adaptación de determinados motores trifásicos para su operación en instalaciones con alimentación monofásica, considerando las características del motor y las condiciones de operación.",
-
-    activities: [
+      "Conversión de tensión y configuración de devanados para operación en alta o baja tensión",
+      "Reconfiguración de conexiones de devanados",
+      "Rediseño de devanados para aplicaciones de mayor demanda",
+      "Cálculo y diseño de devanados para la restauración de las condiciones eléctricas originales del motor",
       "Evaluación del motor",
-      "Conversión de motores trifásicos",
-      "Adaptación eléctrica",
-      "Modificación del bobinado",
-      "Pruebas de funcionamiento",
-      "Verificación de operación"
+      "Desmontaje y limpieza de componentes",
+      "Retiro de devanados dañados",
+      "Cálculo y diseño de devanados",
+      "Fabricación e instalación de devanados",
+      "Reemplazo de sistemas de aislamientos",
+      "Reemplazo de rodamientos",
+      "Aplicación de pintura exterior",
+      "Pruebas eléctricas",
+      "Puesta en marcha y verificación de operación"
     ],
 
     images: []
 
   },
-
-
-  // =========================================
-  // 03. TRANSFORMADORES
-  // =========================================
-
-  transformadores: {
-
-    title:
-      "Bobinado y mantenimiento de transformadores",
-
-    shortDescription:
-      "Bobinado y mantenimiento de transformadores de baja y media tensión.",
-
-    description:
-      "Realizamos trabajos de bobinado y mantenimiento de transformadores de baja y media tensión, buscando conservar condiciones adecuadas de funcionamiento, seguridad y confiabilidad.",
-
-    activities: [
-      "Bobinado de transformadores",
-      "Mantenimiento de transformadores",
-      "Mantenimiento de baja tensión",
-      "Mantenimiento de media tensión",
-      "Diagnóstico",
-      "Inspección general"
-    ],
-
-    images: []
-
-  },
-
-
-  // =========================================
-  // 04. DIAGNÓSTICO
-  // =========================================
-
   diagnostico: {
 
     title:
-      "Diagnóstico de fallas",
+      "Diagnóstico de fallas (Troubleshooting)",
 
     shortDescription:
-      "Identificación y diagnóstico de fallas en equipos electromecánicos.",
+      "Evaluación de las condiciones eléctricas, mecánicas y operativas en motores para identificar fallas, determinar sus causas y establecer acciones correctivas.",
 
     description:
-      "Realizamos diagnóstico de fallas para identificar condiciones anormales en equipos electromecánicos y determinar las acciones necesarias para su reparación o mantenimiento.",
+      "Evaluación de las condiciones eléctricas, mecánicas y operativas en motores para identificar fallas, determinar sus causas y establecer acciones correctivas.",
 
     activities: [
       "Diagnóstico de fallas",
-      "Inspección de equipos",
-      "Identificación de problemas eléctricos",
-      "Identificación de problemas mecánicos",
-      "Pruebas eléctricas",
-      "Evaluación del estado del equipo"
-    ],
-
-    images: []
-
-  },
-
-
-  // =========================================
-  // 05. MANTENIMIENTO
-  // =========================================
-
-  mantenimiento: {
-
-    title:
-      "Mantenimiento correctivo, preventivo y predictivo",
-
-    shortDescription:
-      "Mantenimiento electromecánico orientado a conservar la confiabilidad y disponibilidad de los equipos.",
-
-    description:
-      "Realizamos mantenimiento correctivo, preventivo y predictivo para conservar el funcionamiento de los equipos electromecánicos y ayudar a detectar condiciones que puedan provocar fallas o paros inesperados.",
-
-    activities: [
-      "Mantenimiento correctivo",
-      "Mantenimiento preventivo",
-      "Mantenimiento predictivo",
       "Pruebas de aislamiento",
-      "Medición de resistencia",
-      "Análisis térmico",
-      "Diagnóstico de equipos"
+      "Mediciones eléctricas",
+      "Identificación de causas de falla"
     ],
 
     images: []
 
   },
-
-
-  // =========================================
-  // 06. RODAMIENTOS
-  // =========================================
-
-  rodamientos: {
-
-    title:
-      "Reemplazo de rodamientos",
-
-    shortDescription:
-      "Inspección y reemplazo de rodamientos para equipos electromecánicos.",
-
-    description:
-      "Realizamos inspección y reemplazo de rodamientos como parte de los trabajos de mantenimiento y reparación de equipos electromecánicos.",
-
-    activities: [
-      "Inspección de rodamientos",
-      "Diagnóstico de desgaste",
-      "Reemplazo de rodamientos",
-      "Revisión mecánica",
-      "Verificación de funcionamiento"
-    ],
-
-    images: []
-
-  },
-
-
-  // =========================================
-  // 07. INSTALACIÓN Y PUESTA EN MARCHA
-  // =========================================
-
-  instalacion: {
-
-    title:
-      "Instalación y puesta en marcha",
-
-    shortDescription:
-      "Instalación y puesta en marcha de equipos y sistemas electromecánicos.",
-
-    description:
-      "Realizamos trabajos de instalación, conexión y puesta en marcha de equipos y sistemas electromecánicos, verificando sus condiciones de operación.",
-
-    activities: [
-      "Instalación de equipos",
-      "Conexiones eléctricas",
-      "Puesta en marcha",
-      "Verificación de funcionamiento",
-      "Pruebas de operación"
-    ],
-
-    images: []
-
-  },
-
-
-  // =========================================
-  // 08. DIMENSIONAMIENTO
-  // =========================================
-
-  dimensionamiento: {
-
-    title:
-      "Dimensionamiento",
-
-    shortDescription:
-      "Dimensionamiento de soluciones electromecánicas de acuerdo con los requerimientos de cada aplicación.",
-
-    description:
-      "Realizamos análisis y dimensionamiento de soluciones electromecánicas considerando las necesidades técnicas de cada aplicación y las condiciones de operación del equipo.",
-
-    activities: [
-      "Análisis de requerimientos",
-      "Dimensionamiento de equipos",
-      "Evaluación de condiciones de operación",
-      "Selección de soluciones",
-      "Análisis técnico"
-    ],
-
-    images: []
-
-  },
-
-
-  // =========================================
-  // 09. CONTROL Y AUTOMATIZACIÓN
-  // =========================================
-
   automatizacion: {
 
     title:
       "Control y automatización de motores",
 
     shortDescription:
-      "Control y automatización de motores mediante Softstarter, VFD, arranque estrella delta y autotransformador.",
+      "Diseñamos e implementamos soluciones de control y automatización de motores para optimizar sus condiciones de arranque, operación y protección.",
 
     description:
       "Diseñamos e implementamos soluciones de control y automatización de motores para optimizar sus condiciones de arranque, operación y protección.",
 
     activities: [
-      "Softstarter",
-      "Variadores de frecuencia VFD",
+      "Variadores de frecuencia (VFD)",
+      "Arrancadores suaves (Softstarter)",
       "Arranque estrella delta",
       "Arranque con autotransformador",
-      "Tableros de control",
-      "Control y protección de motores",
-      "Automatización"
+      "Arranque reversible",
+      "Sistemas de protección de motores",
+      "Tableros de control y fuerza",
+      "Automatización por PLC",
+      "Evaluación de las condiciones de operación y requerimientos de la aplicación",
+      "Dimensionamiento y selección de equipos de control, protección y maniobra",
+      "Diseño de circuitos de fuerza y control",
+      "Elaboración de diagramas eléctricos",
+      "Configuración y programación de equipos de control",
+      "Fabricación e integración de tableros eléctricos",
+      "Instalación y conexión de componentes",
+      "Pruebas eléctricas y funcionales",
+      "Puesta en marcha y ajuste de parámetros",
+      "Verificación de operación y funcionamiento del sistema",
+      "Documentación técnica del proyecto"
     ],
 
     images: []
 
   },
-
-
-  // =========================================
-  // 10. VARIADORES DE FRECUENCIA
-  // =========================================
-
-  variadores: {
+  mantenimiento: {
 
     title:
-      "Configuración de variadores de frecuencia",
+      "Mantenimiento preventivo",
 
     shortDescription:
-      "Configuración de variadores de frecuencia para aplicaciones industriales.",
+      "Mantenimiento preventivo orientado a conservar la confiabilidad, disponibilidad y condiciones de motores y equipos electromecánicos industriales.",
 
     description:
-      "Realizamos configuración de variadores de frecuencia de acuerdo con las características del motor y los requerimientos de operación de cada aplicación.",
+      "Mantenimiento preventivo orientado a conservar la confiabilidad, disponibilidad y condiciones de motores y equipos electromecánicos industriales.",
 
     activities: [
-      "Configuración de VFD",
-      "Configuración de parámetros",
-      "Ajuste de operación",
-      "Configuración de arranque",
-      "Configuración de protección",
-      "Pruebas de funcionamiento"
+      "Evaluación del motor y condiciones de operación",
+      "Desmontaje, limpieza e inspección de componentes",
+      "Restauración del sistema de aislamientos",
+      "Reemplazo de rodamientos",
+      "Ajustes y correcciones mecánicas",
+      "Alineación y balanceo",
+      "Protección de acabado exterior",
+      "Pruebas eléctricas",
+      "Puesta en marcha y verificación de operación"
     ],
 
     images: []
 
   },
-
-
-  // =========================================
-  // 11. CONTROL ELÉCTRICO INDUSTRIAL
-  // =========================================
-
-  "control-electrico": {
+  predictivo: {
 
     title:
-      "Control eléctrico industrial",
+      "Mantenimiento predictivo",
 
     shortDescription:
-      "Soluciones de control eléctrico para aplicaciones industriales.",
+      "Mantenimiento basado en el monitoreo y análisis de la condición de motores y equipos electromecánicos industriales para detectar anomalías, anticipar fallas y optimizar la planificación del mantenimiento preventivo.",
 
     description:
-      "Desarrollamos soluciones de control eléctrico industrial orientadas a las necesidades de operación, protección y automatización de los equipos.",
+      "Mantenimiento basado en el monitoreo y análisis de la condición de motores y equipos electromecánicos industriales para detectar anomalías, anticipar fallas y optimizar la planificación del mantenimiento preventivo.",
 
     activities: [
-      "Control eléctrico",
-      "Tableros de control",
-      "Circuitos de mando",
-      "Circuitos de fuerza",
-      "Protección eléctrica",
-      "Automatización de equipos"
+      "Análisis de Circuitos de Motor (MCA)",
+      "Análisis de vibraciones",
+      "Termografía",
+      "Pruebas de aislamiento",
+      "Evaluación y diagnóstico del equipo",
+      "Medición y análisis de parámetros de condición",
+      "Identificación de anomalías y posibles modos de falla",
+      "Reporte técnico y diagnóstico",
+      "Recomendaciones de mantenimiento",
+      "Acciones correctivas o preventivas",
+      "Definición de acciones correctivas o preventivas"
     ],
 
     images: []
 
   },
-
-
-  // =========================================
-  // 12. INSTALACIONES ELÉCTRICAS
-  // =========================================
-
-  instalaciones: {
+  transformadores: {
 
     title:
-      "Instalaciones eléctricas industriales",
+      "Bobinado y mantenimiento de transformadores de baja y media tensión",
 
     shortDescription:
-      "Instalaciones eléctricas para aplicaciones industriales.",
+      "Servicio especializado de diagnóstico, mantenimiento y restauración de transformadores de baja y media tensión.",
 
     description:
-      "Realizamos instalaciones y adecuaciones eléctricas industriales de acuerdo con los requerimientos técnicos de cada proyecto.",
+      "Servicio especializado de diagnóstico, mantenimiento y restauración de transformadores de baja y media tensión, orientado a preservar su confiabilidad, seguridad y condiciones de operación.",
 
     activities: [
-      "Instalaciones eléctricas industriales",
-      "Canalizaciones",
-      "Cableado de fuerza",
-      "Sistemas de tierras físicas",
-      "Adecuaciones eléctricas",
-      "Corrección de factor de potencia"
+      "Evaluación e inspección general del transformador",
+      "Desmontaje y limpieza de componentes",
+      "Inspección del núcleo magnético y devanados",
+      "Diagnóstico del sistema de aislamiento",
+      "Reparación y reconstrucción de devanados",
+      "Reemplazo y restauración de sistemas de aislamiento",
+      "Reemplazo de componentes y accesorios",
+      "Mantenimiento de conexiones y terminales",
+      "Pruebas eléctricas de diagnóstico",
+      "Pruebas de aislamiento",
+      "Verificación de conexiones y relación de transformación",
+      "Aplicación de protección y acabado exterior",
+      "Ensamble del transformador",
+      "Puesta en servicio y verificación de operación",
+      "Elaboración de reporte técnico"
     ],
 
     images: []
 
-  }
+  },
 
 };
