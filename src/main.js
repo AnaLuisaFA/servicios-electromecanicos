@@ -25,6 +25,21 @@ function renderServicePage() {
 
   const path = window.location.pathname;
 
+  const logoLink = document.querySelector('.navbar .logo');
+  if (logoLink) {
+    logoLink.href = '/#inicio';
+  }
+
+  const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+  navLinks.forEach(link => {
+    link.href = `/${link.getAttribute('href')}`;
+    link.removeAttribute('aria-current');
+  });
+
+  document
+    .querySelector('.nav-menu a[href="/#servicios"]')
+    ?.setAttribute('aria-current', 'location');
+
   const slug = path
     .split('/servicios/')[1]
     ?.split('/')[0];
@@ -80,6 +95,21 @@ function renderServicePage() {
             <p>
               ${service.description}
             </p>
+
+            ${
+              service.descriptionItems?.length
+                ? `
+                  ${service.descriptionItemsTitle
+                    ? `<h3 class="service-detail-description-list-title">${service.descriptionItemsTitle}</h3>`
+                    : ''}
+                  <ul class="service-detail-description-list">
+                    ${service.descriptionItems
+                      .map(item => `<li>${item}</li>`)
+                      .join('')}
+                  </ul>
+                `
+                : ''
+            }
 
           </div>
 
@@ -152,6 +182,112 @@ function renderServicePage() {
   `;
 }
 
+function initSectionNavigation() {
+  const navLinks = [...document.querySelectorAll('.nav-menu a[href^="#"]')];
+  const sections = navLinks
+    .map(link => document.getElementById(link.hash.slice(1)))
+    .filter(section => section instanceof HTMLElement);
+
+  if (!navLinks.length || !sections.length) {
+    return;
+  }
+
+  let updateScheduled = false;
+
+  const updateActiveSection = () => {
+    updateScheduled = false;
+
+    const navbar = document.querySelector('.navbar');
+    const readingPosition = window.scrollY + (navbar?.offsetHeight ?? 0) + 1;
+    let activeSection = sections[0];
+
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top + window.scrollY <= readingPosition) {
+        activeSection = section;
+      }
+    });
+
+    const lastSection = sections[sections.length - 1];
+    const lastSectionBounds = lastSection.getBoundingClientRect();
+    const isAtPageBottom =
+      window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1;
+
+    if (
+      isAtPageBottom &&
+      lastSectionBounds.top < window.innerHeight &&
+      lastSectionBounds.bottom > (navbar?.offsetHeight ?? 0)
+    ) {
+      activeSection = lastSection;
+    }
+
+    navLinks.forEach(link => {
+      if (link.hash === `#${activeSection.id}`) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  const scheduleUpdate = () => {
+    if (!updateScheduled) {
+      updateScheduled = true;
+      window.requestAnimationFrame(updateActiveSection);
+    }
+  };
+
+  window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('resize', scheduleUpdate);
+  updateActiveSection();
+}
+
+function initSectionReveal() {
+  if (
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    !('IntersectionObserver' in window)
+  ) {
+    return;
+  }
+
+  const revealTargets = document.querySelectorAll([
+    'main > section:not(.hero) .section-header',
+    'main > section:not(.hero) .services-engineering',
+    'main > section:not(.hero) .service-card',
+    'main > section:not(.hero) .learn-card',
+    'main > section:not(.hero) .client-sector',
+    'main > #instalaciones .workshop-content > *',
+    'main > #contacto .contact-intro > .button'
+  ].join(', '));
+
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        currentObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -32px 0px'
+  });
+
+  revealTargets.forEach(target => {
+    const cardSiblings = [...target.parentElement.children]
+      .filter(sibling => sibling.matches('.service-card, .learn-card, .client-sector'));
+    const cardIndex = cardSiblings.indexOf(target);
+
+    if (cardIndex >= 0) {
+      target.style.setProperty(
+        '--reveal-delay',
+        `${Math.min(cardIndex, 4) * 160}ms`
+      );
+    }
+
+    target.classList.add('scroll-reveal');
+    observer.observe(target);
+  });
+}
+
 function initWorkshopMap() {
 
   const mapElement = document.getElementById('workshop-map');
@@ -197,6 +333,8 @@ L.Icon.Default.mergeOptions({
     shadowUrl: markerShadow
 });
 initWorkshopMap();
+initSectionNavigation();
+initSectionReveal();
 
 // =========================================
 // FORMULARIO DE CONTACTO

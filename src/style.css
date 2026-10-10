@@ -37,11 +37,12 @@ html {
   background-color: var(--background);
   background-image:
     linear-gradient(rgba(8, 15, 36, 0.74), rgba(8, 15, 36, 0.74)),
-    url('/src/assets/hero.png');
-  background-attachment: fixed;
-  background-position: center;
+    url('./assets/next.png'),
+    url('./assets/_.png');
+  background-attachment: scroll;
+  background-position: center, center calc(250vw - 100px), center -100px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%, 100% auto, 100% auto;
 }
 
 body {
@@ -146,6 +147,8 @@ main > section[id] {
 }
 
 .nav-menu a {
+  position: relative;
+
   color: var(--text-secondary);
 
   font-size: 16px;
@@ -153,8 +156,23 @@ main > section[id] {
   transition: color 0.3s ease;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a[aria-current="location"] {
   color: var(--primary);
+}
+
+.nav-menu a[aria-current="location"] {
+  font-weight: 500;
+}
+
+.nav-menu a[aria-current="location"]::after {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  background: var(--primary);
+  content: "";
 }
 
 
@@ -259,11 +277,33 @@ main > section[id] {
   }
 }
 
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 1500ms ease,
+    transform 1500ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero h1,
-  .hero-description {
+  .hero-description,
+  .scroll-reveal,
+  .scroll-reveal.is-visible {
     animation: none;
     transition: none;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
   }
 
   .hero h1 {
@@ -1133,8 +1173,15 @@ main > section[id] {
   line-height: 1.8;
 }
 
+.service-detail-description-list-title {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 17px;
+}
 
-.service-detail-activities ul {
+
+.service-detail-activities ul,
+.service-detail-description-list {
   list-style: none;
 
   display: flex;
@@ -1145,7 +1192,8 @@ main > section[id] {
 }
 
 
-.service-detail-activities li {
+.service-detail-activities li,
+.service-detail-description-list li {
   position: relative;
 
   padding-left: 25px;
@@ -1154,7 +1202,8 @@ main > section[id] {
 }
 
 
-.service-detail-activities li::before {
+.service-detail-activities li::before,
+.service-detail-description-list li::before {
   content: "✓";
 
   position: absolute;
@@ -2329,6 +2378,7 @@ main > section[id] {
   overflow: hidden;
 
   transition:
+    opacity 1500ms ease,
     transform 0.3s ease,
     border-color 0.3s ease,
     box-shadow 0.3s ease,

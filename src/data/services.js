@@ -1,4 +1,13 @@
-import heroImage from "../assets/hero.png";
+import bobinadoImage1 from "../assets/Servicios/Bobinado/1.png";
+import bobinadoImage2 from "../assets/Servicios/Bobinado/2.jpg";
+import bobinadoImage3 from "../assets/Servicios/Bobinado/3.jpg";
+import automatizacionImage from "../assets/Servicios/Control y automatización de motores/1.jpeg";
+import mantenimientoPreventivoImage1 from "../assets/Servicios/Mantenimiento preventivo/1.avif";
+import mantenimientoPreventivoImage2 from "../assets/Servicios/Mantenimiento preventivo/2.jfif";
+import mantenimientoPreventivoImage3 from "../assets/Servicios/Mantenimiento preventivo/3.webp";
+import mantenimientoPredictivoImage from "../assets/Servicios/Mantenimiento predictivo/1.png";
+import transformadoresImage1 from "../assets/Servicios/Bobinado y mantenimiento de transformadores/1.png";
+import transformadoresImage2 from "../assets/Servicios/Bobinado y mantenimiento de transformadores/2.jpeg";
 
 export const services = {
   bobinado: {
@@ -7,7 +16,7 @@ export const services = {
       "Bobinado",
 
     shortDescription:
-      "Restauración de devanados a las condiciones originales.",
+      "  ",
 
     description:
       "Restauración de devanados a las condiciones originales.",
@@ -24,9 +33,9 @@ export const services = {
     ],
 
     images: [
-      heroImage,
-      heroImage,
-      heroImage
+      bobinadoImage1,
+      bobinadoImage2,
+      bobinadoImage3
     ]
 
   },
@@ -36,7 +45,7 @@ export const services = {
       "Conversión de motores",
 
     shortDescription:
-      "Conversión y rediseño de devanados para adaptar motores a las condiciones eléctricas y requerimientos operativos de cada aplicación industrial.",
+      " ",
 
     description:
       "Conversión y rediseño de devanados para adaptar motores a las condiciones eléctricas y requerimientos operativos de cada aplicación industrial.",
@@ -68,7 +77,7 @@ export const services = {
       "Diagnóstico de fallas (Troubleshooting)",
 
     shortDescription:
-      "Evaluación de las condiciones eléctricas, mecánicas y operativas en motores para identificar fallas, determinar sus causas y establecer acciones correctivas.",
+      "  ",
 
     description:
       "Evaluación de las condiciones eléctricas, mecánicas y operativas en motores para identificar fallas, determinar sus causas y establecer acciones correctivas.",
@@ -89,12 +98,11 @@ export const services = {
       "Control y automatización de motores",
 
     shortDescription:
-      "Diseñamos e implementamos soluciones de control y automatización de motores para optimizar sus condiciones de arranque, operación y protección.",
-
+      "  ",
     description:
       "Diseñamos e implementamos soluciones de control y automatización de motores para optimizar sus condiciones de arranque, operación y protección.",
 
-    activities: [
+    descriptionItems: [
       "Variadores de frecuencia (VFD)",
       "Arrancadores suaves (Softstarter)",
       "Arranque estrella delta",
@@ -102,7 +110,11 @@ export const services = {
       "Arranque reversible",
       "Sistemas de protección de motores",
       "Tableros de control y fuerza",
-      "Automatización por PLC",
+      "Automatización por PLC"
+    ],
+
+    activities: [
+
       "Evaluación de las condiciones de operación y requerimientos de la aplicación",
       "Dimensionamiento y selección de equipos de control, protección y maniobra",
       "Diseño de circuitos de fuerza y control",
@@ -116,7 +128,7 @@ export const services = {
       "Documentación técnica del proyecto"
     ],
 
-    images: []
+    images: [automatizacionImage]
 
   },
   mantenimiento: {
@@ -125,7 +137,7 @@ export const services = {
       "Mantenimiento preventivo",
 
     shortDescription:
-      "Mantenimiento preventivo orientado a conservar la confiabilidad, disponibilidad y condiciones de motores y equipos electromecánicos industriales.",
+      "  ",
 
     description:
       "Mantenimiento preventivo orientado a conservar la confiabilidad, disponibilidad y condiciones de motores y equipos electromecánicos industriales.",
@@ -142,7 +154,11 @@ export const services = {
       "Puesta en marcha y verificación de operación"
     ],
 
-    images: []
+    images: [
+      mantenimientoPreventivoImage1,
+      mantenimientoPreventivoImage2,
+      mantenimientoPreventivoImage3
+    ]
 
   },
   predictivo: {
@@ -151,16 +167,21 @@ export const services = {
       "Mantenimiento predictivo",
 
     shortDescription:
-      "Mantenimiento basado en el monitoreo y análisis de la condición de motores y equipos electromecánicos industriales para detectar anomalías, anticipar fallas y optimizar la planificación del mantenimiento preventivo.",
+      "  ",
 
     description:
       "Mantenimiento basado en el monitoreo y análisis de la condición de motores y equipos electromecánicos industriales para detectar anomalías, anticipar fallas y optimizar la planificación del mantenimiento preventivo.",
 
-    activities: [
+    descriptionItemsTitle: "Técnicas de diagnóstico:",
+
+    descriptionItems: [
       "Análisis de Circuitos de Motor (MCA)",
       "Análisis de vibraciones",
       "Termografía",
-      "Pruebas de aislamiento",
+      "Pruebas de aislamiento"
+    ],
+
+    activities: [
       "Evaluación y diagnóstico del equipo",
       "Medición y análisis de parámetros de condición",
       "Identificación de anomalías y posibles modos de falla",
@@ -170,7 +191,7 @@ export const services = {
       "Definición de acciones correctivas o preventivas"
     ],
 
-    images: []
+    images: [mantenimientoPredictivoImage]
 
   },
   transformadores: {
@@ -202,7 +223,10 @@ export const services = {
       "Elaboración de reporte técnico"
     ],
 
-    images: []
+    images: [
+      transformadoresImage1,
+      transformadoresImage2
+    ]
 
   },
 
