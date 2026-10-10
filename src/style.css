@@ -40,7 +40,7 @@ html {
     url('./assets/next.png'),
     url('./assets/_.png');
   background-attachment: scroll;
-  background-position: center, center calc(250vw - 100px), center -100px;
+  background-position: center, center calc(250vw - 170px), center -100px;
   background-repeat: no-repeat;
   background-size: 100% 100%, 100% auto, 100% auto;
 }
